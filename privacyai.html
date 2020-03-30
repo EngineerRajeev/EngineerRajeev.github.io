@@ -1,0 +1,100 @@
+
+<html>
+	<head>
+		<title>Blog</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="index.html" class="logo"><strong>Home</strong> Page</a>
+									<ul class="icons">
+										<li><a href="https://www.linkedin.com/in/engineerrajeev/" class="icon brands fa-linkedin"><span class="label">Linkedin</span></a></li>
+										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+										<li><a href="https://github.com/EngineerRajeev" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+										<li><a href="skype:rajeev.bopche" class="icon brands fa-skype"><span class="label">Skype</span></a></li>
+									</ul>
+								</header>
+
+							<!-- Content -->
+								<section>
+									<header class="main">
+										<h1>Privacy Preserving Artificial Intelligence</h1>
+									</header>
+
+									<span class="image main"><img src="images/privacyai.jpg" alt="" /></span>
+
+									<p>Data privacy has been called “the most important issue in the next decade,” and has taken center stage thanks to legislation like the European Union’s General Data Protection Regulation (GDPR) and the California Consumer Privacy Act (CCPA). Companies, developers, and researchers are scrambling to keep up with the requirements. In particular, “Privacy by Design” is integral to the GDPR and will likely only gain in popularity this decade. When using privacy preserving techniques, legislation suddenly becomes less daunting, as does ensuring data security which is central to maintaining user trust.</p>
+									<p>Data privacy is a central issue to training and testing AI models, especially ones that train and infer on sensitive data. Yet, to our knowledge, there have been no guides published regarding what it means to have perfectly privacy-preserving AI. We introduce the four pillars required to achieve perfectly privacy-preserving AI and discuss various technologies that can help address each of the pillars. We back our claims up with relatively new research in the quickly growing subfield of privacy-preserving machine learning.</p>
+								
+
+									<hr class="major" />
+
+									<h2>The Four Pillars of Perfectly-Privacy Preserving AI</h2>
+									<p>During my research, I identified four pillars of privacy-preserving machine learning. These are:
+										* Training Data Privacy: The guarantee that a malicious actor will not be able to reverse-engineer the training data.
+										* Input Privacy: The guarantee that a user’s input data cannot be observed by other parties, including the model creator.
+										* Output Privacy: The guarantee that the output of a model is not visible by anyone except for the user whose data is being inferred upon.
+										* Model Privacy: The guarantee that the model cannot be stolen by a malicious party.
+										While 1–3 deal with protecting data creators, 4 is meant to protect the model creator.</p>
+									<p>Training data privacy While it may be slightly more difficult to gather information about training data and model weights than it is from plaintext (the technical term for unencrypted) input and output data, recent research has demonstrated that reconstructing training data and reverse-engineering models is not as huge challenge as one would hope.</p>
+
+									<hr class="major" />
+
+									<h2>Model privacy</h2>
+									<p>AI models can be companies’ bread and butter, many of which provide predictive capabilities to developers through APIs or, more recently, through downloadable software. Model privacy is the last of the four pillars that must be considered and is also core to both user and company interests. Companies will have little motivation to provide interesting products and spend money on improving AI capabilities if their competitors can easily copy their models (an act which is not straightforward to investigate).
+										Evidence
+										Machine learning models form the core product & IP of many companies, so having a model stolen is a severe threat and can have significant negative business implications. A model can be stolen outright or can be reverse-engineered based on its outputs [14].
+										Solutions
+										* There has been some work on applying differential privacy to model outputs to prevent model inversion attacks. Differential privacy usually means compromising model accuracy; however, [15] presents a method that does not sacrifice accuracy in exchange for privacy.
+										* Homomorphic encryption can be used not only to preserve input and output privacy, but also model privacy, if one chooses to encrypt a model in the cloud. This comes at significant computational cost, however, and does not prevent model inversion attacks.</p>
+									
+
+									<hr class="major" />
+
+									<h2>Satisfying All Four Pillars</h2>
+									<p>As can be seen from the previous sections, there is no blanket technology that will cover all privacy problems. Rather, to have perfectly privacy-preserving AI (something that both the research community and industry have yet to achieve), one must combine technologies:
+										* 		Homomorphic Encryption + Differential Privacy
+										* 		Secure Multiparty Computation + Differential Privacy
+										* 		Federated Learning + Differential Privacy + Secure Multiparty Computation
+										* 		Homomorphic Encryption + PATE
+										* 		Secure Multiparty Computation + PATE
+										* 		Federated Learning + PATE + Homomorphic Encryption
+										Other combinations also exist, including some with alternative technologies that do not have robust mathematical guarantees yet; namely, (1) secure enclaves (e.g., Intel SGX) which allow for computations to be performed without even the system kernel having access, (2) data de-identification, and (3) data synthesis.
+										For now, perfectly privacy-preserving AI is still a research problem, but there are a few tools that can address some of the most urgent privacy needs.
+										</p>
+									<p>Privacy-Preserving Machine Learning Tools
+										* 		Differential privacy in Tensorflow
+										* 		MPC and Federated Learning in PyTorch
+										* 		MPC in Tensorflow
+										* 		On-device Machine Learning with CoreML3</p>
+
+								</section>
+
+						</div>
+					</div>
+
+				
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
